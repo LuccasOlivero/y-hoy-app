@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Y hoy?",
+  title: "¿Y hoy? | ¿Qué vas a tomar?",
   description: "app para saber que y cuanto tomar",
 };
-
+// aca van los providers
 export default function RootLayout({
   children,
 }: Readonly<{
