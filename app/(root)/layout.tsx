@@ -3,5 +3,5 @@ export default function SetupLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <h2>{children}</h2>;
+  return <div className="bg-custom">{children}</div>;
 }
