@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Lilita_One } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const lilita = Lilita_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Y hoy? | ¿Qué vas a tomar?",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lilita.className}>{children}</body>
     </html>
   );
 }

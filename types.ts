@@ -1,8 +1,9 @@
 export interface Drink {
-  id: number;
+  id?: number;
   name: string;
+  description?: string;
+  slug?: string;
   price: string;
-  description: string;
   percentAlcohol: string;
   amargor: string;
   flavor: string;

@@ -7,10 +7,33 @@ body:root {
 }
 
 .bg-custom {
-  background-image: url("https://media.istockphoto.com/id/1134068329/es/foto/violeta-p%C3%BArpura-y-azul-marino-descentrado-movimiento-difuminado-degradado-fondo-abstracto.jpg?s=612x612&w=0&k=20&c=QAyA_tvJpbchhkcqNGkhyyhJd7jDbIzEGP-U21TdUoI=");
+  background-image: url("/fondo.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
   min-height: 100%;
   position: absolute;
+}
+
+.text-stroke-title {
+  position: absolute;
+  bottom: -3px;
+  left: -5px;
+  -webkit-text-stroke: 0.5px #a98a4d;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.text-stroke-sub {
+  position: absolute;
+  bottom: -2px;
+  left: -3px;
+  -webkit-text-stroke: 0.5px #267b40;
+  color: transparent;
+}
+
+.font {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  letter-spacing: -1.5px;
+  color: grey;
 }
