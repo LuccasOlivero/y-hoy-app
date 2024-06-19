@@ -1,13 +1,14 @@
+import Container from "./components/container";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Main from "./components/main";
 
 export default function SetupHome() {
   return (
-    <div className="flex flex-col w-full h-full items-center justify-betweem">
+    <Container>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Container>
   );
 }

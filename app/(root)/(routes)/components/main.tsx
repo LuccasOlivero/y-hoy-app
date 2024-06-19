@@ -20,7 +20,7 @@ export default function Main() {
       </div>
 
       <p className="mt-1 text-center text-sm text-slate-50">
-        <a href="#">Ver menú completo</a>
+        <a href="/menu">Ver menú completo</a>
       </p>
     </main>
   );
