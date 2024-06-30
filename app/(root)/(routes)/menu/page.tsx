@@ -17,8 +17,10 @@ export default async function Menu() {
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         <DrinksList drinks={drinks} title="Con alcohol" />
-        <DrinksList drinks={drinks} title="Con alcohol" />
-        <DrinksList drinks={drinks} title="Con alcohol" />
+        <DrinksList drinks={drinks} title="Sin alcohol" />
+        <DrinksList drinks={drinks} title="Cervezas" />
+        <DrinksList drinks={drinks} title="Espumantes" />
+        <DrinksList drinks={drinks} title="Vinos" />
       </div>
     </Container>
   );
