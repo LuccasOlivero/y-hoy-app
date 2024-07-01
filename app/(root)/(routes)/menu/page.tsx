@@ -2,6 +2,7 @@ import { Drink as DrinkType } from "@/types";
 
 import getAllDrinks from "@/actions/get-menu";
 import Container from "../components/container";
+import { formatter } from "@/lib/utils";
 
 export default async function Menu() {
   const drinks = await getAllDrinks();
@@ -62,12 +63,13 @@ export function DrinkCard({ drink }: Test2) {
       <div className="flex justify-between font py-1">
         <p className="font-normal uppercase">
           {drink.name}
-
           {drink.description?.length ? ` (${drink.description})` : ""}
         </p>
         {/* generacion de puntos entre los elementos p */}
         <span className="flex-1 border-b border-dotted border-gray-300 relative bottom-1"></span>
-        <p className="bg-[#D0B17D] rounded-sm font">{drink.price}</p>
+        <p className="bg-[#D0B17D] rounded-sm font">
+          {formatter.format(+drink.price)}
+        </p>
       </div>
     </div>
   );
