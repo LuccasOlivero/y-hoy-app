@@ -3,7 +3,19 @@ import { Drink as DrinkType } from "@/types";
 import Container from "../components/container";
 import { formatter } from "@/lib/utils";
 
+import getWine from "@/actions/get-wine";
+import getBeers from "@/actions/get-beers";
+import getNoAlcohol from "@/actions/get-no-alcohol";
+import getWithAlcohol from "@/actions/get-with-alcohol";
+import getSparkling from "@/actions/get-sparkling";
+
 export default async function Menu() {
+  const withAlcohol = await getWithAlcohol();
+  const noAlcohol = await getNoAlcohol();
+  const sparkling = await getSparkling();
+  const beers = await getBeers();
+  const wines = await getWine();
+
   return (
     <Container>
       <h2 className="text-4xl text-[#A98A4D] font-bold uppercase relative inline-block tracking-widest my-4">
@@ -14,11 +26,11 @@ export default async function Menu() {
       </h2>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        <DrinksList drinks={drinks} title="Con alcohol" />
-        <DrinksList drinks={drinks} title="Sin alcohol" />
-        <DrinksList drinks={drinks} title="Cervezas" />
-        <DrinksList drinks={drinks} title="Espumantes" />
-        <DrinksList drinks={drinks} title="Vinos" />
+        <DrinksList drinks={withAlcohol} title="Con alcohol" />
+        <DrinksList drinks={noAlcohol} title="Sin alcohol" />
+        <DrinksList drinks={beers} title="Cervezas" />
+        <DrinksList drinks={sparkling} title="Espumantes" />
+        <DrinksList drinks={wines} title="Vinos" />
       </div>
     </Container>
   );
