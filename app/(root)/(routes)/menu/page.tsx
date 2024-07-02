@@ -1,12 +1,9 @@
 import { Drink as DrinkType } from "@/types";
 
-import getAllDrinks from "@/actions/get-menu";
 import Container from "../components/container";
 import { formatter } from "@/lib/utils";
 
 export default async function Menu() {
-  const drinks = await getAllDrinks();
-
   return (
     <Container>
       <h2 className="text-4xl text-[#A98A4D] font-bold uppercase relative inline-block tracking-widest my-4">
@@ -65,6 +62,7 @@ export function DrinkCard({ drink }: Test2) {
           {drink.name}
           {drink.description?.length ? ` (${drink.description})` : ""}
         </p>
+
         {/* generacion de puntos entre los elementos p */}
         <span className="flex-1 border-b border-dotted border-gray-300 relative bottom-1"></span>
         <p className="bg-[#D0B17D] rounded-sm font">
