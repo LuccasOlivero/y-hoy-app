@@ -4,8 +4,8 @@ import getBeerDrinks from "@/actions/get-beers";
 import getSparklingDrinks from "@/actions/get-sparklings";
 import getWineDrinks from "@/actions/get-wines";
 
-import DrinksList from "./components/drink-list";
 import Container from "../components/container";
+import DrinksCard from "./components/drink-card";
 
 export default async function Menu() {
   const alcoholic = await getAlcoholicDrinks();
@@ -23,12 +23,12 @@ export default async function Menu() {
         </span>
       </h2>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        <DrinksList drinks={alcoholic} title="Con alcohol" />
-        <DrinksList drinks={nonAlcoholic} title="Sin alcohol" />
-        <DrinksList drinks={beers} title="Cervezas" />
-        <DrinksList drinks={sparkling} title="Espumantes" />
-        <DrinksList drinks={wines} title="Vinos" />
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 p-2">
+        <DrinksCard drinks={alcoholic} title="Con alcohol" />
+        <DrinksCard drinks={nonAlcoholic} title="Sin alcohol" />
+        <DrinksCard drinks={beers} title="Cervezas" />
+        <DrinksCard drinks={sparkling} title="Espumantes" />
+        <DrinksCard drinks={wines} title="Vinos" />
       </div>
     </Container>
   );

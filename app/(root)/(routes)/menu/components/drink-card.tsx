@@ -1,24 +1,27 @@
-import { formatter } from "@/lib/utils";
 import { Drink } from "@/types";
+import DrinkItem from "./drink-item";
 
 interface DrinkType {
-  drink: Drink;
+  drinks: Drink[];
+  title: string;
 }
 
-export default function DrinkCard({ drink }: DrinkType) {
+export default function DrinksCard({ drinks, title }: DrinkType) {
   return (
-    <div>
-      <div className="flex justify-between font py-1">
-        <p className="font-normal uppercase">
-          {drink.name}
-          {drink.description?.length ? ` (${drink.description})` : ""}
-        </p>
+    <div className="min-w-64 outline outline-[#A98A4D] rounded-sm w-full">
+      {drinks.length === 0 && "No se encontraror bebidas. Reinicie la pagina"}
 
-        {/* generacion de puntos entre los elementos p */}
-        <span className="flex-1 border-b border-dotted border-gray-300 relative bottom-1"></span>
-        <p className="bg-[#D0B17D] rounded-sm font">
-          {formatter.format(+drink.price)}
-        </p>
+      <div className="px-2 w-full bg-[#CFC795]">
+        <h2 className="text-[#267b40] relative inline-block tracking-widest uppercase w-full text-2xl">
+          {title}
+          <span className="text-stroke-sub">{title}</span>
+        </h2>
+      </div>
+
+      <div className="px-2 w-full">
+        {drinks.map((drink) => (
+          <DrinkItem key={drink.id} drink={drink} />
+        ))}
       </div>
     </div>
   );
