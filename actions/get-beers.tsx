@@ -6,9 +6,9 @@ const URL = `http://localhost:3001`;
 
 export default async function getBeerDrinks(): Promise<Drink[]> {
   const res = await axios.get(
-    `${URL}/api/beer/ce3a9dde-487f-413d-9f94-b90a60c89835`
+    `${URL}/api/drink/ce3a9dde-487f-413d-9f94-b90a60c89835`
   );
 
-  revalidatePath("/api/beer/ce3a9dde-487f-413d-9f94-b90a60c89835");
+  revalidatePath("/api/drink/ce3a9dde-487f-413d-9f94-b90a60c89835");
   return res.data;
 }
