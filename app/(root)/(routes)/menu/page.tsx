@@ -1,5 +1,5 @@
 import getAlcoholicDrinks from "@/actions/get-alcoholisc";
-import getNonAlcoholicDrinks from "@/actions/non-alcoholics";
+import getNonAlcoholicDrinks from "@/actions/get-non-alcoholics";
 import getBeerDrinks from "@/actions/get-beers";
 import getSparklingDrinks from "@/actions/get-sparklings";
 import getWineDrinks from "@/actions/get-wines";
