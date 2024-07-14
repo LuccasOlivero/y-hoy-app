@@ -4,7 +4,6 @@ import getBeerDrinks from "@/actions/get-beers";
 import getSparklingDrinks from "@/actions/get-sparklings";
 import getWineDrinks from "@/actions/get-wines";
 
-import Container from "../components/container";
 import DrinksCard from "./components/drink-card";
 
 export default async function Menu() {
@@ -15,7 +14,7 @@ export default async function Menu() {
   const wines = await getWineDrinks();
 
   return (
-    <Container>
+    <div className="container mx-auto">
       <h2 className="text-4xl text-[#A98A4D] font-bold uppercase relative inline-block tracking-widest my-4">
         {"<"} bebidas! {">"}
         <span className="text-stroke-title">
@@ -30,6 +29,6 @@ export default async function Menu() {
         <DrinksCard drinks={sparkling} title="Espumantes" />
         <DrinksCard drinks={wines} title="Vinos" />
       </div>
-    </Container>
+    </div>
   );
 }
