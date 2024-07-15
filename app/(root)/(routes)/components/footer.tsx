@@ -1,7 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="flex flex-col h-full w-full items-center justify-end text-[#A98A4D]">
-      <p className="text-normal ">us English</p>
+    <footer className="absolute bottom-2 right-4 text-[#A98A4D]">
       <p className="text-xs font-extralight mt-4">
         Desarrollado por{" "}
         <a

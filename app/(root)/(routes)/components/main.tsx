@@ -22,6 +22,7 @@ export default function Main() {
 
       <p className="mt-1 text-center text-sm text-[#A98A4D]">
         <a href="/menu">Ver menú completo</a>
+        <p className="text-normal ">us English</p>
       </p>
     </main>
   );
