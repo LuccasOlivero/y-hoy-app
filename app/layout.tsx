@@ -9,10 +9,9 @@ const lilita = Lilita_One({
 
 export const metadata: Metadata = {
   title: "Y hoy? | ¿Qué vas a tomar?",
-  description: "app para saber que y cuanto tomar",
+  description: "app para saber que tomar",
 };
 
-// aca van los providers
 export default function RootLayout({
   children,
 }: Readonly<{
