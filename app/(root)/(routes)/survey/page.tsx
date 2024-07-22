@@ -28,23 +28,24 @@ export default function Survey({ onSubmit }: { onSubmit: any }) {
           {currentQuestion.title}
         </h3>
 
-        {currentQuestion.options.map((option) => (
-          <div key={option.id} className="w-full">
+        <div className="w-full grid grid-cols-2 gap-3">
+          {currentQuestion.options.map((option) => (
             <Button
+              key={option.id}
               value={option.id}
               onClick={() => handleChange(option.id)}
               variant="secondary"
-              className="bg-[#267b40] text-white rounded-md p-2 w-full"
+              className="h-[5rem] shadow-[0_4px_0_0] shadow-[#B89B62] text-sm px-8 active:translate-y-1 active:shadow-none transition-all duration-200 text-slate-50 bg-gradient-to-r from-[#267b40] to-[#2F9D5C] hover:to-[#267b40] hover:from-[#309A50]"
             >
               {option.response}
             </Button>
-          </div>
-        ))}
+          ))}
+        </div>
 
-        <p className="text-[#B89B62] text-sm">Me da igual</p>
+        <p className="text-[#B89B62] text-sm mt-2">Me da igual</p>
 
         {currentQuestion.text.map((text, i) => (
-          <p className="text-[#A98A4D] text-base" key={i}>
+          <p className="text-[#A98A4D] text-base text-center" key={i}>
             {text["en"]}
           </p>
         ))}
