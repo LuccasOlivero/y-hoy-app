@@ -4,7 +4,7 @@ import { useState } from "react";
 import { questions } from "./data/survey";
 import { Button } from "@/components/ui/button";
 
-export default function Survey({ onSubmit }: { onSubmit: any }) {
+export default function Survey() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
 
@@ -15,7 +15,7 @@ export default function Survey({ onSubmit }: { onSubmit: any }) {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      onSubmit(answers);
+      if (questions.length === currentQuestionIndex + 1) return; // TODO: modal window with the results
     }
   };
 
